@@ -1,13 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+import Counter from './components/localStorage';
+import ParentComponent from './components/propDrilling/parentComponent';
+import ChildComponent from './components/propDrilling/childComponent';
+import GrandChildComponent from './components/propDrilling/GrandChildComponent';
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
+    {/* Local state below */}
+    {/* <Counter /> */}
+
+    {/* Prop Drilling below */}
+    {/* <ParentComponent /> */}
+
+    
   </React.StrictMode>
 );
 
