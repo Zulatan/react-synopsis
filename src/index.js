@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import Counter from './components/localStorage';
-import ParentComponent from './components/propDrilling/parentComponent';
-import ChildComponent from './components/propDrilling/childComponent';
-import GrandChildComponent from './components/propDrilling/GrandChildComponent';
+// import Counter from './components/localStorage';
+// import ParentComponent from './components/propDrilling/parentComponent';
+// import ChildComponent from './components/propDrilling/childComponent';
+// import GrandChildComponent from './components/propDrilling/GrandChildComponent';
 
 
 
@@ -20,6 +20,7 @@ root.render(
     {/* Prop Drilling below */}
     {/* <ParentComponent /> */}
 
+    {/* Context API below */}
     
   </React.StrictMode>
 );
