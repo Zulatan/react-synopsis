@@ -35,8 +35,9 @@ const Login = () => {
 
   return (
     <>
+    {/* <h1>Login System Test</h1> */}
       <div className="p-4 box">
-        <h2 className="mb-3">Firebase/ React Auth Login</h2>
+        <h2 className="mb-3">Please login</h2>
 
         {error && <Alert variant="danger">{error}</Alert>}
 
