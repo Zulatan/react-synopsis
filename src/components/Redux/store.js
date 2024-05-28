@@ -1,4 +1,4 @@
-import { configureStore } from "redux";
+import { configureStore } from '@reduxjs/toolkit';
 
 const initialState = {
   count: 0,
@@ -14,6 +14,14 @@ function reducer(state = initialState, action) {
   }
 }
 
-const store = configureStore(reducer);
+const store = configureStore({reducer});
 
 export default store;
+
+
+
+
+
+
+
+
