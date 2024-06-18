@@ -8,9 +8,13 @@ const Signup = () => {
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
   const [password, setPassword] = useState("");
+
+  // Context API
   const { signUp } = useUserAuth();
+  
   let navigate = useNavigate();
 
+  // Handles submissions of user registers
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");

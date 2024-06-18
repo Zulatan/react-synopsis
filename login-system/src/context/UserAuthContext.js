@@ -9,11 +9,13 @@ import {
 } from "firebase/auth";
 import { auth } from "../firebase";
 
+// Creating the context
 const userAuthContext = createContext();
 
 export function UserAuthContextProvider({ children }) {
   const [user, setUser] = useState({});
 
+  // Firebase methods
   function logIn(email, password) {
     return signInWithEmailAndPassword(auth, email, password);
   }
@@ -28,6 +30,8 @@ export function UserAuthContextProvider({ children }) {
     return signInWithPopup(auth, googleAuthProvider);
   }
 
+  // Hook fires when state is changed based upon user action.
+  // Logs authentication state
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentuser) => {
       console.log("Auth", currentuser);
@@ -40,6 +44,7 @@ export function UserAuthContextProvider({ children }) {
   }, []);
 
   return (
+    // Wrapping the context provider with values
     <userAuthContext.Provider
       value={{ user, logIn, signUp, logOut, googleSignIn }}
     >
@@ -48,6 +53,7 @@ export function UserAuthContextProvider({ children }) {
   );
 }
 
+// Context export
 export function useUserAuth() {
   return useContext(userAuthContext);
 }
